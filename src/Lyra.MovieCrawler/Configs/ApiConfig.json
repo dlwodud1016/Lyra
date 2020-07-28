@@ -1,0 +1,7 @@
+{
+  "KobisApiKey": "e43ff13bf79e487df54f94d52b6f027e",
+  "TheMoviedbKey": "87d005a0c25e9efb0f7e39a80d51143d",
+
+  "KobisApiBoxOfficesUrl": "http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json",
+  "TheMoviedbSearchMovieUrl": "https://api.themoviedb.org/3/search/movie"
+}

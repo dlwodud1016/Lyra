@@ -10,8 +10,10 @@ namespace Lyra.MovieCrawler
             Console.WriteLine("Hello World!");
 
             KobisApi kobisApi = new KobisApi();
+            TheMoviedbApi theMoviedbApi = new TheMoviedbApi();
 
-            kobisApi.GetBoxOffices(DateTime.Now);
+            //kobisApi.GetBoxOffices(DateTime.Now);
+            theMoviedbApi.SearchMovies("괴물", 1);
         }
     }
 }

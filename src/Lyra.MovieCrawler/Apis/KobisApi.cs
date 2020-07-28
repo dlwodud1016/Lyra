@@ -17,10 +17,10 @@ namespace Lyra.MovieCrawler.Apis
     {   
         public KobisBoxOfficeResponse GetBoxOffices(DateTime targetDt)
         {
-            var client = new RestClient(ApiConfig.KobisApiBoxOfficesUrl);
+            var client = new RestClient(ConfigManage.ApiConfig.KobisApiBoxOfficesUrl);
             var request = new RestRequest(Method.GET);
 
-            request.AddParameter(KobisParameter.Key, "e43ff13bf79e487df54f94d52b6f027e");
+            request.AddParameter(KobisParameter.Key, ConfigManage.ApiConfig.KobisApiKey);
             request.AddParameter(KobisParameter.TargetDate, targetDt.ToString("yyyymmdd"));
             request.AddParameter(KobisParameter.MultiMovieYn, "N");
             request.AddParameter(KobisParameter.RepNationCd, "K");
