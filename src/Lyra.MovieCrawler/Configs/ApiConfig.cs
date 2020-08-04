@@ -14,6 +14,14 @@ namespace Lyra.MovieCrawler.Configs
         public String TheMoviedbKey { get; set; }
 
         public String KobisApiBoxOfficesUrl { get; set; } = "http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json";
+
+        #region TMDB
         public String TheMoviedbSearchMovieUrl { get; set; } = "https://api.themoviedb.org/3/search/movie";
+        public String TheMoviedbPeopleMovieCreditsUrl { get; set; } = "https://api.themoviedb.org/3/person/{0}/movie_credits";
+
+        public String TheMoviedbMovieCreditsUrl { get; set; } = "https://api.themoviedb.org/3/movie/{0}/credits";
+
+        public String TheMoviedbCreditDetailUrl { get; set; } = "https://api.themoviedb.org/3/credit/{0}";
+        #endregion TMDB
     }
 }

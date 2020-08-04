@@ -1,10 +1,8 @@
 ﻿using Lyra.MovieCrawler.Configs;
-using Lyra.MovieCrawler.Domain.Entities;
+using Lyra.MovieCrawler.Domain.Entities.TMDB;
 using Lyra.MovieCrawler.Parameters;
 using RestSharp;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Lyra.MovieCrawler.Apis
 {
@@ -30,6 +28,59 @@ namespace Lyra.MovieCrawler.Apis
             var res = client.Execute<TheMoviedbSearchResponse>(request);
 
             if(res.StatusCode == System.Net.HttpStatusCode.OK)
+            {
+                return res.Data;
+            }
+
+            return null;
+        }
+
+        public TheMoviedbMovieCreditResponse GetCreditsOfMovieId(int movieId)
+        {
+            var client = new RestClient(String.Format(ConfigManage.ApiConfig.TheMoviedbMovieCreditsUrl, movieId));
+            var request = new RestRequest(Method.GET);
+
+            request.AddParameter(TheMoviedbParameter.Key, ConfigManage.ApiConfig.TheMoviedbKey);
+
+            var res = client.Execute<TheMoviedbMovieCreditResponse>(request);
+
+            if (res.StatusCode == System.Net.HttpStatusCode.OK)
+            {
+                return res.Data;
+            }
+
+            return null;
+        }
+
+        public TheMoviedbCreditDetailResponse GetCreditDetail(String creditId)
+        {
+            var client = new RestClient(String.Format(ConfigManage.ApiConfig.TheMoviedbCreditDetailUrl, creditId));
+            var request = new RestRequest(Method.GET);
+
+            request.AddParameter(TheMoviedbParameter.Key, ConfigManage.ApiConfig.TheMoviedbKey);
+
+            var res = client.Execute<TheMoviedbCreditDetailResponse>(request);
+
+            if (res.StatusCode == System.Net.HttpStatusCode.OK)
+            {
+                return res.Data;
+            }
+
+            return null;
+        }
+
+
+        public TheMoviedbPeopleResponse GetMoviesOfPersonId(int personId)
+        {
+            var client = new RestClient(String.Format(ConfigManage.ApiConfig.TheMoviedbPeopleMovieCreditsUrl, personId));
+            var request = new RestRequest(Method.GET);
+
+            request.AddParameter(TheMoviedbParameter.Key, ConfigManage.ApiConfig.TheMoviedbKey);
+            request.AddParameter(TheMoviedbParameter.Language, "ko");
+
+            var res = client.Execute<TheMoviedbPeopleResponse>(request);
+
+            if (res.StatusCode == System.Net.HttpStatusCode.OK)
             {
                 return res.Data;
             }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Text.Json.Serialization;
 
-namespace Lyra.MovieCrawler.Domain.Entities
+namespace Lyra.MovieCrawler.Domain.Entities.TMDB
 {
     public class TheMoviedbSearchResponse
     {
@@ -17,6 +17,6 @@ namespace Lyra.MovieCrawler.Domain.Entities
         public int TotalPages { get; set; }
 
         [JsonPropertyName("results")]
-        public List<TheMoviedbSearchResult> Results { get; set; }
+        public List<TheMoviedbMovieInfo> Results { get; set; }
     }
 }

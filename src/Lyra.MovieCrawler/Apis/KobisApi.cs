@@ -1,17 +1,15 @@
 ﻿using Lyra.MovieCrawler.Configs;
-using Lyra.MovieCrawler.Domain.Entities;
+using Lyra.MovieCrawler.Domain.Entities.Kobis;
 using Lyra.MovieCrawler.Parameters;
 using RestSharp;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Lyra.MovieCrawler.Apis
 {
     /// <summary>
     /// 영화관입장권통합전상망 오픈 API
     /// http://www.kobis.or.kr/kobisopenapi/homepg/board/findTutorial.do
-    
+
     /// </summary>
     public class KobisApi
     {   

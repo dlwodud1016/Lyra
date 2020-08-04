@@ -12,8 +12,19 @@ namespace Lyra.MovieCrawler
             KobisApi kobisApi = new KobisApi();
             TheMoviedbApi theMoviedbApi = new TheMoviedbApi();
 
-            //kobisApi.GetBoxOffices(DateTime.Now);
-            theMoviedbApi.SearchMovies("괴물", 1);
+            DateTime target = DateTime.Now;
+            while(target.Year >= 2020)
+            {
+                var boxOffices = kobisApi.GetBoxOffices(target);
+                foreach(var boxOffice in boxOffices.BoxOfficeResult.DailyBoxOfficeList)
+                {
+                    var searchMovies = theMoviedbApi.SearchMovies(boxOffice.MovieNm, 1);
+                    
+                }
+            }
+
+            
+            
         }
     }
 }

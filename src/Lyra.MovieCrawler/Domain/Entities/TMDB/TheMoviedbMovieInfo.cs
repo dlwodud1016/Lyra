@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Text;
 using System.Text.Json.Serialization;
 
-namespace Lyra.MovieCrawler.Domain.Entities
+namespace Lyra.MovieCrawler.Domain.Entities.TMDB
 {
-    public class TheMoviedbSearchResult
+    public class TheMoviedbMovieInfo
     {
         [JsonPropertyName("popularity")]
         public float Popularity { get; set; }
