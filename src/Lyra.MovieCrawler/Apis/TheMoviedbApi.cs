@@ -52,22 +52,7 @@ namespace Lyra.MovieCrawler.Apis
             return null;
         }
 
-        public TheMoviedbCreditDetailResponse GetCreditDetail(String creditId)
-        {
-            var client = new RestClient(String.Format(ConfigManage.ApiConfig.TheMoviedbCreditDetailUrl, creditId));
-            var request = new RestRequest(Method.GET);
-
-            request.AddParameter(TheMoviedbParameter.Key, ConfigManage.ApiConfig.TheMoviedbKey);
-
-            var res = client.Execute<TheMoviedbCreditDetailResponse>(request);
-
-            if (res.StatusCode == System.Net.HttpStatusCode.OK)
-            {
-                return res.Data;
-            }
-
-            return null;
-        }
+        
 
 
         public TheMoviedbPeopleResponse GetMoviesOfPersonId(int personId)
@@ -88,9 +73,38 @@ namespace Lyra.MovieCrawler.Apis
             return null;
         }
 
-        public void GetMovieDetail(DateTime targetDt)
+        public void GetMovieDetail(int movieId)
         {
+            var client = new RestClient(String.Format(ConfigManage.ApiConfig.TheMoviedbMovieDetailUrl, movieId));
+            var request = new RestRequest(Method.GET);
 
+            request.AddParameter(TheMoviedbParameter.Key, ConfigManage.ApiConfig.TheMoviedbKey);
+
+            var res = client.Execute<TheMoviedbCreditDetailResponse>(request);
+
+            if (res.StatusCode == System.Net.HttpStatusCode.OK)
+            {
+                return res.Data;
+            }
+
+            return null;
+        }
+
+        public TheMoviedbCreditDetailResponse GetCreditDetail(String creditId)
+        {
+            var client = new RestClient(String.Format(ConfigManage.ApiConfig.TheMoviedbCreditDetailUrl, creditId));
+            var request = new RestRequest(Method.GET);
+
+            request.AddParameter(TheMoviedbParameter.Key, ConfigManage.ApiConfig.TheMoviedbKey);
+
+            var res = client.Execute<TheMoviedbCreditDetailResponse>(request);
+
+            if (res.StatusCode == System.Net.HttpStatusCode.OK)
+            {
+                return res.Data;
+            }
+
+            return null;
         }
     }
 }

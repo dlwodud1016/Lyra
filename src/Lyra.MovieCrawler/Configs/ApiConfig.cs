@@ -22,6 +22,8 @@ namespace Lyra.MovieCrawler.Configs
         public String TheMoviedbMovieCreditsUrl { get; set; } = "https://api.themoviedb.org/3/movie/{0}/credits";
 
         public String TheMoviedbCreditDetailUrl { get; set; } = "https://api.themoviedb.org/3/credit/{0}";
+
+        public String TheMoviedbMovieDetailUrl { get; set; } = "https://api.themoviedb.org/3/movie/{0}";
         #endregion TMDB
     }
 }
