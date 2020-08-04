@@ -73,14 +73,14 @@ namespace Lyra.MovieCrawler.Apis
             return null;
         }
 
-        public void GetMovieDetail(int movieId)
+        public TheMoviedbMovieDetailResponse GetMovieDetail(int movieId)
         {
             var client = new RestClient(String.Format(ConfigManage.ApiConfig.TheMoviedbMovieDetailUrl, movieId));
             var request = new RestRequest(Method.GET);
 
             request.AddParameter(TheMoviedbParameter.Key, ConfigManage.ApiConfig.TheMoviedbKey);
 
-            var res = client.Execute<TheMoviedbCreditDetailResponse>(request);
+            var res = client.Execute<TheMoviedbMovieDetailResponse>(request);
 
             if (res.StatusCode == System.Net.HttpStatusCode.OK)
             {
