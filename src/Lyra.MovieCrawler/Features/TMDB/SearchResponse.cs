@@ -1,11 +1,12 @@
-﻿using System;
+﻿using Lyra.MovieCrawler.Domain.Entities.TMDB;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Text.Json.Serialization;
 
-namespace Lyra.MovieCrawler.Domain.Entities.TMDB
+namespace Lyra.MovieCrawler.Features.TMDB
 {
-    public class TheMoviedbSearchResponse
+    public class SearchResponse
     {
         [JsonPropertyName("page")]
         public int Page { get; set; }
@@ -17,6 +18,6 @@ namespace Lyra.MovieCrawler.Domain.Entities.TMDB
         public int TotalPages { get; set; }
 
         [JsonPropertyName("results")]
-        public List<TheMoviedbMovieInfo> Results { get; set; }
+        public List<MovieInfo> Results { get; set; }
     }
 }

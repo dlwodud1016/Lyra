@@ -19,7 +19,7 @@ namespace Lyra.MovieCrawler.Apis
             var request = new RestRequest(Method.GET);
 
             request.AddParameter(KobisParameter.Key, ConfigManage.ApiConfig.KobisApiKey);
-            request.AddParameter(KobisParameter.TargetDate, targetDt.ToString("yyyymmdd"));
+            request.AddParameter(KobisParameter.TargetDate, targetDt.ToString("yyyyMMdd"));
             request.AddParameter(KobisParameter.MultiMovieYn, "N");
             request.AddParameter(KobisParameter.RepNationCd, "K");
 

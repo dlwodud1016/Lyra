@@ -5,7 +5,7 @@ using System.Text.Json.Serialization;
 
 namespace Lyra.MovieCrawler.Domain.Entities.TMDB
 {
-    public class TheMoviedbGenre
+    public class Genre
     {
         [JsonPropertyName("id")]
         public int Id { get; set; }

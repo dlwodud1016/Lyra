@@ -1,11 +1,24 @@
-﻿using System;
+﻿using Lyra.MovieCrawler.Features.TMDB;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Text.Json.Serialization;
 
 namespace Lyra.MovieCrawler.Domain.Entities.TMDB
 {
-    public class TheMoviedbMovieDetailResponse
+    public class MovieCredit
+    {
+        [JsonPropertyName("id")]
+        public int Id { get; set; }
+
+        [JsonPropertyName("cast")]
+        public List<MovieCreditCast> Casts { get; set; }
+
+        [JsonPropertyName("crew")]
+        public List<MovieCreditCrew> Crews { get; set; }
+    }
+
+    public class MovieDetail
     {
         [JsonPropertyName("adult")]
         public bool Adult { get; set; }
@@ -17,7 +30,7 @@ namespace Lyra.MovieCrawler.Domain.Entities.TMDB
         public long Budget { get; set; }
 
         [JsonPropertyName("genres")]
-        public List<TheMoviedbGenre> Genres { get; set; }
+        public List<Genre> Genres { get; set; }
 
         [JsonPropertyName("id")]
         public int Id { get; set; }
@@ -38,10 +51,10 @@ namespace Lyra.MovieCrawler.Domain.Entities.TMDB
         public double Popularity { get; set; }
 
         [JsonPropertyName("production_companies")]
-        public List<TheMoviedbProductionCompany> ProductionCompanies { get; set; }
+        public List<ProductionCompany> ProductionCompanies { get; set; }
 
         [JsonPropertyName("production_countries")]
-        public List<TheMoviedbProductionCountry> ProductionCountries { get; set; }
+        public List<ProductionCountry> ProductionCountries { get; set; }
 
         [JsonPropertyName("release_date")]
         public String ReleaseDate { get; set; }
@@ -53,7 +66,7 @@ namespace Lyra.MovieCrawler.Domain.Entities.TMDB
         public int Runtime { get; set; }
 
         [JsonPropertyName("spoken_languages")]
-        public List<TheMoviedbSpokenLanguage> SpokenLanguages { get; set; }
+        public List<SpokenLanguage> SpokenLanguages { get; set; }
 
         [JsonPropertyName("status")]
         public String Status { get; set; }
@@ -73,6 +86,7 @@ namespace Lyra.MovieCrawler.Domain.Entities.TMDB
         [JsonPropertyName("vote_count")]
         public int VoteCount { get; set; }
 
-        
+        [JsonPropertyName("credit")]
+        public MovieCredit MovieCredit { get; set; }
     }
 }

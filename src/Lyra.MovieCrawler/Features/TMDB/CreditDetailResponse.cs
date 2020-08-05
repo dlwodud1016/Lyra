@@ -1,9 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Lyra.MovieCrawler.Domain.Entities.TMDB;
+using System;
 using System.Text.Json.Serialization;
 
-namespace Lyra.MovieCrawler.Domain.Entities.TMDB
+namespace Lyra.MovieCrawler.Features.TMDB
 {
     public class TheMoviedbCreditDetailPerson
     {
@@ -26,7 +25,7 @@ namespace Lyra.MovieCrawler.Domain.Entities.TMDB
         public float Popularity { get; set; }
     }
 
-    public class TheMoviedbCreditDetailResponse
+    public class CreditDetailResponse
     {
         [JsonPropertyName("credit_type")]
         public int CreditType { get; set; }
@@ -44,7 +43,7 @@ namespace Lyra.MovieCrawler.Domain.Entities.TMDB
         public String Id { get; set; }
 
         [JsonPropertyName("media")]
-        public TheMoviedbMovieInfo Media { get; set; }
+        public MovieInfo Media { get; set; }
 
         [JsonPropertyName("person")]
         public TheMoviedbCreditDetailPerson Person { get; set; }

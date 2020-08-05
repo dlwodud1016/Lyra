@@ -5,15 +5,15 @@ using System.Text.Json.Serialization;
 
 namespace Lyra.MovieCrawler.Domain.Entities.TMDB
 {
-    public class TheMoviedbProductionCompany
+    public class MovieCreditCrew : PeopleCrew
     {
-        [JsonPropertyName("id")]
-        public int Id { get; set; }
+        [JsonPropertyName("gender")]
+        public int Gender { get; set; }
 
         [JsonPropertyName("name")]
         public String Name { get; set; }
 
-        [JsonPropertyName("origin_country")]
-        public String OriginCountry { get; set; }
+        [JsonPropertyName("order")]
+        public int Order { get; set; }
     }
 }

@@ -5,12 +5,15 @@ using System.Text.Json.Serialization;
 
 namespace Lyra.MovieCrawler.Domain.Entities.TMDB
 {
-    public class TheMoviedbSpokenLanguage
+    public class ProductionCompany
     {
-        [JsonPropertyName("iso_639_1")]
-        public String Iso_639_1 { get; set; }
+        [JsonPropertyName("id")]
+        public int Id { get; set; }
 
         [JsonPropertyName("name")]
         public String Name { get; set; }
+
+        [JsonPropertyName("origin_country")]
+        public String OriginCountry { get; set; }
     }
 }

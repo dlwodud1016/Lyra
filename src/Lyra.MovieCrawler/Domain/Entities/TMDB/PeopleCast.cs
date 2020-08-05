@@ -1,11 +1,12 @@
-﻿using System;
+﻿using Lyra.MovieCrawler.Features.TMDB;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Text.Json.Serialization;
 
 namespace Lyra.MovieCrawler.Domain.Entities.TMDB
 {
-    public class TheMoviedbPeopleCast : TheMoviedbMovieInfo
+    public class PeopleCast : MovieInfo
     {
         [JsonPropertyName("character")]
         public String Character { get; set; }
