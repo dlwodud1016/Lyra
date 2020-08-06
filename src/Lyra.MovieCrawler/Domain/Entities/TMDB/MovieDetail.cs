@@ -88,5 +88,8 @@ namespace Lyra.MovieCrawler.Domain.Entities.TMDB
 
         [JsonPropertyName("credit")]
         public MovieCredit MovieCredit { get; set; }
+
+        [JsonPropertyName("omdb_movie_detail")]
+        public OMDb.MovieDetail OMDbMovieDetail { get; set; }
     }
 }

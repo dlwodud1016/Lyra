@@ -6,7 +6,8 @@ namespace Lyra.MovieCrawler.Domain.Entities.Experiment
 {
     public class FeaturesSet
     {
-        public String Id { get; set; }
+        public String OMDbId { get; set; }
+        public String TMDbId { get; set; }
         public String Name { get; set; }
 
         public HistoricalFeature HistoricalFeature { get; set; }
