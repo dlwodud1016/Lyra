@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Lyra.MovieCrawler.Domain.Entities.Experiment
+namespace Lyra.Domain.Entities.Experiment
 {
     public class SourceOfTopicalFeature
     {

@@ -1,10 +1,8 @@
-﻿using Lyra.MovieCrawler.Features.TMDB;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Text.Json.Serialization;
 
-namespace Lyra.MovieCrawler.Domain.Entities.TMDB
+namespace Lyra.Domain.Entities.TMDB
 {
     public class MovieCredit
     {

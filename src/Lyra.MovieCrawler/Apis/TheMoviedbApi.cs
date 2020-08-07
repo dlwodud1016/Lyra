@@ -1,5 +1,5 @@
-﻿using Lyra.MovieCrawler.Configs;
-using Lyra.MovieCrawler.Domain.Entities.TMDB;
+﻿using Lyra.Domain.Entities.TMDB;
+using Lyra.MovieCrawler.Configs;
 using Lyra.MovieCrawler.Features.TMDB;
 using Lyra.MovieCrawler.Parameters;
 using RestSharp;

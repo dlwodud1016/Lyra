@@ -1,5 +1,5 @@
-﻿using Lyra.MovieCrawler.Apis;
-using Lyra.MovieCrawler.Domain.Entities.TMDB;
+﻿using Lyra.Domain.Entities.TMDB;
+using Lyra.MovieCrawler.Apis;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -59,7 +59,7 @@ namespace Lyra.MovieCrawler
                 }
                 String jsonString = JsonSerializer.Serialize(movieDetail);
                 String validFileName = GetValidFileName(movieDetail.OriginalTitle);
-                if (validFileName != String.Empty)
+                if (validFileName != String.Empty && validFileName != null)
                 {
                     System.IO.File.WriteAllText(Path.Combine(saveFileRootPath, $"{validFileName}_{movieDetail.ReleaseDate}_{movieDetail.ImdbId}.json"), jsonString);
 

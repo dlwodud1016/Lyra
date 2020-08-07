@@ -1,7 +1,5 @@
-﻿using Lyra.MovieCrawler.Domain.Entities.TMDB;
-using System;
+﻿using Lyra.Domain.Entities.TMDB;
 using System.Collections.Generic;
-using System.Text;
 using System.Text.Json.Serialization;
 
 namespace Lyra.MovieCrawler.Features.TMDB

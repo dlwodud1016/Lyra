@@ -1,5 +1,5 @@
-﻿using Lyra.MovieCrawler.Configs;
-using Lyra.MovieCrawler.Domain.Entities.OMDb;
+﻿using Lyra.Domain.Entities.OMDb;
+using Lyra.MovieCrawler.Configs;
 using Lyra.MovieCrawler.Parameters;
 using RestSharp;
 using System;

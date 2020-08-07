@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Text;
 using System.Text.Json.Serialization;
 
-namespace Lyra.MovieCrawler.Domain.Entities.TMDB
+namespace Lyra.Domain.Entities.TMDB
 {
-    public class SpokenLanguage
+    public class ProductionCountry
     {
-        [JsonPropertyName("iso_639_1")]
-        public String Iso_639_1 { get; set; }
+        [JsonPropertyName("iso_3166_1")]
+        public String Iso_3166_1 { get; set; }
 
         [JsonPropertyName("name")]
         public String Name { get; set; }

@@ -1,5 +1,5 @@
-﻿using Lyra.MovieCrawler.Configs;
-using Lyra.MovieCrawler.Domain.Entities.Kobis;
+﻿using Lyra.Domain.Entities.Kobis;
+using Lyra.MovieCrawler.Configs;
 using Lyra.MovieCrawler.Parameters;
 using RestSharp;
 using System;

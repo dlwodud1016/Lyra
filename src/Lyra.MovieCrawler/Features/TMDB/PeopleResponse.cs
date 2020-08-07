@@ -1,4 +1,4 @@
-﻿using Lyra.MovieCrawler.Domain.Entities.TMDB;
+﻿using Lyra.Domain.Entities.TMDB;
 using System.Collections.Generic;
 
 namespace Lyra.MovieCrawler.Features.TMDB

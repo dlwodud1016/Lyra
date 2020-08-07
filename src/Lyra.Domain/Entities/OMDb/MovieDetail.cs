@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Lyra.MovieCrawler.Domain.Entities.OMDb
+namespace Lyra.Domain.Entities.OMDb
 {
     public class Rating
     {

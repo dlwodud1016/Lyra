@@ -3,10 +3,14 @@ using System.Collections.Generic;
 using System.Text;
 using System.Text.Json.Serialization;
 
-namespace Lyra.MovieCrawler.Domain.Entities.TMDB
+namespace Lyra.Domain.Entities.TMDB
 {
-    public class MovieCreditCrew : PeopleCrew
+    public class MovieCreditCast : PeopleCast
     {
+
+        [JsonPropertyName("cast_id")]
+        public int CastId { get; set; }
+
         [JsonPropertyName("gender")]
         public int Gender { get; set; }
 
