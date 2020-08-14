@@ -58,7 +58,7 @@ namespace Lyra.MovieCrawler
                     return;
                 }
                 String jsonString = JsonSerializer.Serialize(movieDetail);
-                String validFileName = GetValidFileName(movieDetail.OriginalTitle);
+                String validFileName = GetValidFileName(movieDetail.OriginalTitle).Trim();
                 if (validFileName != String.Empty && validFileName != null)
                 {
                     System.IO.File.WriteAllText(Path.Combine(saveFileRootPath, $"{validFileName}_{movieDetail.ReleaseDate}_{movieDetail.ImdbId}.json"), jsonString);

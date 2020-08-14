@@ -137,6 +137,9 @@ namespace Lyra.ExperimentDataSet
                 }
             }
 
+            if (movieDetailDict.Count == 0)
+                return 0;
+
             return movieDetailDict.Sum(x => x.Value) / movieDetailDict.Count;
         }
         private static double GetActorAvgRating(MovieDetail targetMovie)
